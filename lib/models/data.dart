@@ -35,21 +35,22 @@ List<Booksdata> continueReading = [
 
 List<Booksdata> popular = [
   Booksdata(
-      bookname: "This is How It Always Is",
-      authorName: "Laurie Frankel",
+      bookname: "The Guest List",
+      authorName: "Lucy Foley",
       percentageCompleted: 0,
-      imagePath: 'assets/images/ThisisHow.jpeg',
-      rating: 4.5),
+      imagePath: 'assets/images/theguest.jpeg',
+      rating: 4.0),
   Booksdata(
       bookname: "In A Land Of Paper Gods",
       authorName: "Rebecca Mackenzie",
       percentageCompleted: 0,
       imagePath: 'assets/images/rebbeca.jpg',
       rating: 4.3),
+
   Booksdata(
-      bookname: "The Guest List",
-      authorName: "Lucy Foley",
+      bookname: "This is How It Always Is",
+      authorName: "Laurie Frankel",
       percentageCompleted: 0,
-      imagePath: 'assets/images/theguest.jpeg',
-      rating: 4.0),
+      imagePath: 'assets/images/ThisisHow.jpeg',
+      rating: 4.5),
 ];
