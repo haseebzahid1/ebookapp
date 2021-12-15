@@ -25,18 +25,12 @@ class PopularImgBlog extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                        blurRadius: 3,
-                        spreadRadius: 2,
-                        offset:
-                        Offset(4, 1),
-                        color: Colors.black
-                            .withOpacity(
-                            0.1))
+                        blurRadius: 3, spreadRadius: 2, offset:
+                        Offset(4, 1), color: Colors.black.withOpacity(0.1))
                   ]
-
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Stack(
+                alignment: Alignment.topCenter,
                 children: [
                   Container(
                     height: 160,
@@ -52,36 +46,71 @@ class PopularImgBlog extends StatelessWidget {
                               offset: Offset(4, 1), color: Colors.black.withOpacity(0.1)),
                         ]
                     ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+
+                    child: Stack(
+
                       children: [
-                        const SizedBox(height: 10,),
-                        TitleText( colors: Colors.black,title: "${imgPopularList.rating}", size: 18,fontWeight: FontWeight.w400,),
-                        const SizedBox(height: 7,),
-                        Container(
-                          width:size.width * 0.40,
-                          height: 12,
-                          decoration: BoxDecoration(
-                            // color: const Color.fromRGBO(230, 230, 232, 1),
-                            borderRadius: BorderRadius.circular(20),
-                            color: Colors.red.withOpacity(0.3),
-                          ),
-                          child: Stack(
-                            children: [
-                              Container(
-                                width:size.width * 0.23,
-                                decoration: BoxDecoration(
-                                  color: const Color.fromRGBO(66, 66, 86, 1),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                              ),
-                            ],
+                        Positioned(
+                          left: 10,
+                          bottom: 15,
+                          child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 7),
+                            width: 60,
+                            height: 36,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10)
+                            ),
+                            child: Row(
+                              children: [
+                                Text( "⭐ "),
+                                Text("${imgPopularList.rating}"),
+                              ],
+                            ),
                           ),
                         ),
                       ],
+                    ),
+                  ),
+
+                  Positioned(
+                    bottom: 10,
+                    left: 8,
+                    right: 8,
+                    child: Container(
+
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 10,),
+                          Wrap(
+                              children: [
+                                 TitleText( colors: Colors.black,title: "${imgPopularList.authorName}", size: 18,fontWeight: FontWeight.w400,)
+                              ],
+                          ),
+                          const SizedBox(height: 7,),
+                          Container(
+                            width:size.width * 0.40,
+                            height: 12,
+                            decoration: BoxDecoration(
+                              // color: const Color.fromRGBO(230, 230, 232, 1),
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.red.withOpacity(0.3),
+                            ),
+                            child: Stack(
+                              children: [
+                                Container(
+                                  width:size.width * 0.23,
+                                  decoration: BoxDecoration(
+                                    color: const Color.fromRGBO(66, 66, 86, 1),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -92,3 +121,6 @@ class PopularImgBlog extends StatelessWidget {
     );
   }
 }
+
+
+

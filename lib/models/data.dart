@@ -42,7 +42,7 @@ List<Booksdata> popular = [
       rating: 4.0),
   Booksdata(
       bookname: "In A Land Of Paper Gods",
-      authorName: "Rebecca Mackenzie",
+      authorName: "Mackenzie",
       percentageCompleted: 0,
       imagePath: 'assets/images/rebbeca.jpg',
       rating: 4.3),
